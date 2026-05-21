@@ -181,19 +181,22 @@
 
     .hero {
       background:
-        linear-gradient(90deg, rgba(7, 17, 31, 0.94), rgba(7, 17, 31, 0.74) 46%, rgba(7, 17, 31, 0.18)),
-        url("https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1800&q=82") center / cover;
+        linear-gradient(120deg, rgba(7, 17, 31, 0.98), rgba(11, 24, 43, 0.94) 52%, rgba(0, 155, 143, 0.28)),
+        url("https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1800&q=82") right center / 58% auto no-repeat;
       color: #ffffff;
-      min-height: 92vh;
-      padding: 136px 0 54px;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      padding: 104px 0 28px;
     }
 
     .hero-grid {
-      align-items: end;
+      align-items: center;
       display: grid;
-      gap: 46px;
-      grid-template-columns: minmax(0, 1fr) 380px;
-      min-height: calc(92vh - 190px);
+      flex: 1;
+      gap: 42px;
+      grid-template-columns: minmax(0, 1fr) minmax(330px, 380px);
+      min-height: 0;
     }
 
     .eyebrow {
@@ -209,24 +212,54 @@
     }
 
     .hero h1 {
-      font-size: clamp(42px, 6vw, 74px);
+      font-size: clamp(40px, 5.2vw, 68px);
       letter-spacing: 0;
       line-height: 1.02;
-      max-width: 860px;
+      max-width: 780px;
     }
 
     .hero-copy {
       color: rgba(255, 255, 255, 0.82);
-      font-size: clamp(17px, 2vw, 21px);
-      margin-top: 24px;
-      max-width: 720px;
+      font-size: clamp(16px, 1.6vw, 20px);
+      margin-top: 20px;
+      max-width: 700px;
+    }
+
+    .hero-proof {
+      color: rgba(255, 255, 255, 0.72);
+      display: flex;
+      flex-wrap: wrap;
+      font-size: 14px;
+      font-weight: 700;
+      gap: 10px;
+      list-style: none;
+      margin-top: 20px;
+      max-width: 760px;
+    }
+
+    .hero-proof li {
+      align-items: center;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.13);
+      border-radius: 999px;
+      display: inline-flex;
+      gap: 8px;
+      min-height: 36px;
+      padding: 7px 12px;
+    }
+
+    .hero-proof i {
+      color: #a7f3d0;
+      flex: 0 0 auto;
+      height: 16px;
+      width: 16px;
     }
 
     .hero-actions {
       display: flex;
       flex-wrap: wrap;
       gap: 14px;
-      margin-top: 34px;
+      margin-top: 28px;
     }
 
     .btn {
@@ -266,18 +299,27 @@
       border-radius: 8px;
       box-shadow: var(--shadow);
       color: var(--ink);
-      padding: 24px;
+      justify-self: end;
+      max-width: 380px;
+      padding: 22px;
+      width: 100%;
     }
 
     .hero-panel h2 {
       font-size: 19px;
       line-height: 1.3;
+      margin-bottom: 10px;
+    }
+
+    .hero-panel p {
+      color: var(--muted);
+      font-size: 14px;
       margin-bottom: 18px;
     }
 
     .check-list {
       display: grid;
-      gap: 14px;
+      gap: 12px;
       list-style: none;
     }
 
@@ -286,7 +328,7 @@
       color: var(--muted);
       display: flex;
       gap: 10px;
-      font-size: 15px;
+      font-size: 14px;
     }
 
     .check-list i {
@@ -296,18 +338,56 @@
       width: 19px;
     }
 
+    .hero-preview-grid {
+      display: grid;
+      gap: 10px;
+      grid-template-columns: repeat(2, 1fr);
+      margin-top: 18px;
+    }
+
+    .hero-preview {
+      aspect-ratio: 16 / 8.6;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .hero-preview:first-child {
+      grid-column: 1 / -1;
+    }
+
+    .hero-preview img {
+      height: 100%;
+      object-fit: cover;
+      width: 100%;
+    }
+
+    .hero-preview span {
+      background: rgba(7, 17, 31, 0.78);
+      bottom: 8px;
+      color: #ffffff;
+      font-size: 12px;
+      font-weight: 800;
+      left: 8px;
+      line-height: 1;
+      padding: 7px 8px;
+      position: absolute;
+      right: 8px;
+    }
+
     .stats {
       border-top: 1px solid rgba(255, 255, 255, 0.18);
       display: grid;
       gap: 18px;
       grid-template-columns: repeat(4, 1fr);
-      margin-top: 54px;
-      padding-top: 28px;
+      margin-top: 26px;
+      padding-top: 24px;
     }
 
     .stat strong {
       display: block;
-      font-size: 30px;
+      font-size: 28px;
       line-height: 1;
     }
 
@@ -625,11 +705,13 @@
       }
 
       .hero-grid {
-        align-items: start;
+        align-items: center;
+        gap: 30px;
       }
 
       .hero-panel {
         max-width: 560px;
+        justify-self: start;
       }
 
       .stats,
@@ -695,7 +777,10 @@
 
       .hero {
         min-height: auto;
-        padding: 106px 0 40px;
+        padding: 96px 0 36px;
+        background:
+          linear-gradient(120deg, rgba(7, 17, 31, 0.98), rgba(11, 24, 43, 0.92)),
+          url("images/inventory.png") center top / cover no-repeat;
       }
 
       .hero-grid {
@@ -703,11 +788,27 @@
       }
 
       .hero h1 {
-        font-size: 42px;
+        font-size: clamp(38px, 12vw, 48px);
+      }
+
+      .hero-copy {
+        margin-top: 18px;
+      }
+
+      .hero-proof li {
+        width: 100%;
       }
 
       .hero-panel {
         padding: 20px;
+      }
+
+      .hero-preview-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-preview:first-child {
+        grid-column: auto;
       }
 
       .stats,
@@ -774,31 +875,53 @@
     <div class="container hero-grid">
       <div>
         <span class="eyebrow"><i data-lucide="sparkles"></i>Sri Lanka-based web design and systems</span>
-        <h1>Websites and systems that grow your business.</h1>
+        <h1>Websites, booking systems, and business software for growing teams.</h1>
         <p class="hero-copy">
-          Sri Lanka-based web development for local and overseas customers.
+          WebX Tech Solutions builds professional websites, admin dashboards, and custom web applications for Sri Lankan and overseas clients.
         </p>
 
+        <ul class="hero-proof" aria-label="Technology and service highlights">
+          <li><i data-lucide="code-2"></i><span>Laravel, PHP, React, Tailwind, MySQL</span></li>
+          <li><i data-lucide="credit-card"></i><span>Payments, booking flows, and admin panels</span></li>
+          <li><i data-lucide="server-cog"></i><span>Domain, hosting, SSL, and launch support</span></li>
+        </ul>
+
         <div class="hero-actions">
-          <a href="https://wa.me/94705651875" target="_blank" class="btn btn-primary" rel="noopener"><i data-lucide="message-circle"></i>Start on WhatsApp</a>
+          <a href="https://wa.me/94705651875" target="_blank" class="btn btn-primary" rel="noopener"><i data-lucide="message-circle"></i>Discuss a Project</a>
           <a href="#portfolio" class="btn btn-ghost"><i data-lucide="briefcase-business"></i>View Work</a>
         </div>
       </div>
 
       <aside class="hero-panel" aria-label="Project highlights">
-        <h2>What your customers see first</h2>
+        <h2>Real project outcomes your business can use</h2>
+        <p>From first customer visit to daily back-office work, the build is shaped around practical business operations.</p>
         <ul class="check-list">
-          <li><i data-lucide="check-circle-2"></i><span>Clean mobile experience that looks professional on every screen.</span></li>
-          <li><i data-lucide="check-circle-2"></i><span>Fast contact paths through phone, WhatsApp, and project inquiry.</span></li>
-          <li><i data-lucide="check-circle-2"></i><span>Real project examples with technologies and live website links.</span></li>
-          <li><i data-lucide="check-circle-2"></i><span>Business-focused content that explains value clearly.</span></li>
+          <li><i data-lucide="check-circle-2"></i><span>Business websites and tourism landing pages.</span></li>
+          <li><i data-lucide="check-circle-2"></i><span>Booking systems, payments, and inquiry flows.</span></li>
+          <li><i data-lucide="check-circle-2"></i><span>Admin dashboards, product management, and reports.</span></li>
+          <li><i data-lucide="check-circle-2"></i><span>Hosting, domains, SSL, DNS, and launch support.</span></li>
         </ul>
+
+        <div class="hero-preview-grid" aria-label="Featured project previews">
+          <div class="hero-preview">
+            <img src="images/inventory.png" alt="Inventory system dashboard preview" loading="lazy">
+            <span>Inventory System</span>
+          </div>
+          <div class="hero-preview">
+            <img src="images/Barbertime.nz.png" alt="Barbertime project preview" loading="lazy">
+            <span>Barbertime</span>
+          </div>
+          <div class="hero-preview">
+            <img src="images/pearl_lanka%20tours.png" alt="Pearl Lanka Tours project preview" loading="lazy">
+            <span>Pearl Lanka Tours</span>
+          </div>
+        </div>
       </aside>
     </div>
 
     <div class="container stats" aria-label="Business highlights">
       <div class="stat">
-        <strong>5+</strong>
+        <strong>7+</strong>
         <span>Featured projects</span>
       </div>
       <div class="stat">
@@ -904,7 +1027,7 @@
                 <span>Blade</span>
                 <span>jQuery</span>
                 <span>Bootstrap</span>
-                <span>Select2</span>
+                <span>Select2 </span>
                 <span>DataTables</span>
                 <span>Eloquent ORM</span>
                 <span>REST APIs</span>
