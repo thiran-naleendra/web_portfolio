@@ -452,6 +452,25 @@
       grid-template-columns: repeat(3, 1fr);
     }
 
+    .series-title {
+      align-items: center;
+      color: var(--ink);
+      display: flex;
+      font-size: 24px;
+      gap: 10px;
+      line-height: 1.2;
+      margin: 26px 0 16px;
+    }
+
+    .series-title:first-of-type {
+      margin-top: 0;
+    }
+
+    .series-title i {
+      color: var(--teal);
+      flex: 0 0 auto;
+    }
+
     .product-card {
       overflow: hidden;
       padding: 0;
@@ -732,10 +751,8 @@
       </a>
 
       <nav class="nav-links" aria-label="Main navigation">
-        <a href="index.html#services">Services</a>
-        <a href="cctv-solutions-sri-lanka.html">CCTV</a>
-        <a href="index.html#portfolio">Portfolio</a>
-        <a href="#process">Process</a>
+        <a href="index.html">Web Development</a>
+        <a href="cctv-solutions-sri-lanka.html">CCTV Solutions</a>
         <button class="theme-toggle" type="button" aria-label="Switch to light mode" aria-pressed="true">
           <i data-lucide="sun"></i>
         </button>
@@ -830,23 +847,23 @@
         <div class="product-grid">
           <article class="product-card">
             <div class="product-image">
-              <img src="https://s3.amazonaws.com/mfs.ezvizlife.com/dc14ac15c970017dfb11d0a9ee02e919.jpg" alt="EZVIZ C6N wireless pan and tilt camera" loading="lazy">
+              <img src="https://mfs.ezvizlife.com/073776431d630895e1e9d72b079ae733.jpg" alt="EZVIZ H9C outdoor Wi-Fi camera" loading="lazy">
             </div>
             <div class="product-body">
-              <span class="product-meta"><i data-lucide="wifi"></i>Wireless indoor</span>
-              <h3>EZVIZ C6N</h3>
-              <p>Smart Wi-Fi pan and tilt camera for indoor monitoring, remote viewing, motion detection, and simple home or shop coverage.</p>
-              <ul class="spec-list" aria-label="EZVIZ C6N highlights">
-                <li><i data-lucide="check-circle-2"></i><span>1080p video with 2.4 GHz Wi-Fi</span></li>
-                <li><i data-lucide="check-circle-2"></i><span>Pan and tilt coverage for wider rooms</span></li>
-                <li><i data-lucide="check-circle-2"></i><span>MicroSD storage support up to 256 GB</span></li>
+              <span class="product-meta"><i data-lucide="wifi"></i>Outdoor Wi-Fi</span>
+              <h3>EZVIZ H9C</h3>
+              <p>Dual-lens outdoor Wi-Fi camera for wider property monitoring, remote viewing, motion detection, and home or shop perimeter coverage.</p>
+              <ul class="spec-list" aria-label="EZVIZ H9C highlights">
+                <li><i data-lucide="check-circle-2"></i><span>Dual-lens coverage for wider outdoor views</span></li>
+                <li><i data-lucide="check-circle-2"></i><span>Smart motion detection and mobile app alerts</span></li>
+                <li><i data-lucide="check-circle-2"></i><span>Designed for gates, yards, shop fronts, and parking areas</span></li>
               </ul>
             </div>
           </article>
 
           <article class="product-card">
             <div class="product-image">
-              <img src="https://static-website.imou.com/5ea45542-a2fa-4c66-afdb-7cba6126041f.png" alt="Imou Ranger 2 wireless indoor camera" loading="lazy">
+              <img src="https://static-website.imou.com/6c277807-2505-4bba-9b99-3480a22fb751.png" alt="Imou Ranger 2 wireless indoor camera" loading="lazy">
             </div>
             <div class="product-body">
               <span class="product-meta"><i data-lucide="wifi"></i>Wireless indoor</span>
@@ -887,6 +904,58 @@
           <p>Recommended for businesses, warehouses, hotels, and homes that need stable recording, PoE/NVR support, and cleaner long-term security management.</p>
         </div>
 
+        <h3 class="series-title"><i data-lucide="shield-check"></i>Hikvision Series</h3>
+        <div class="product-grid">
+          <article class="product-card">
+            <div class="product-image">
+              <img src="https://assets.hikvision.com/prd/public/all/image/m000007734/DS-2CD20X5G1-I.png" alt="Hikvision wired bullet camera" loading="lazy">
+            </div>
+            <div class="product-body">
+              <span class="product-meta"><i data-lucide="cable"></i>Hikvision bullet</span>
+              <h3>Hikvision Bullet Series</h3>
+              <p>Reliable wired bullet camera option for entrances, outdoor walls, parking areas, and long directional views.</p>
+              <ul class="spec-list" aria-label="Hikvision Bullet Series highlights">
+                <li><i data-lucide="check-circle-2"></i><span>Good for outdoor perimeter coverage</span></li>
+                <li><i data-lucide="check-circle-2"></i><span>IR night vision options for low-light areas</span></li>
+                <li><i data-lucide="check-circle-2"></i><span>Works with DVR/NVR recording systems</span></li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-image">
+              <img src="https://assets.hikvision.com/prd/public/all/image/m000000107/31xxG0-Dome.png" alt="Hikvision wired dome camera" loading="lazy">
+            </div>
+            <div class="product-body">
+              <span class="product-meta"><i data-lucide="cable"></i>Hikvision dome</span>
+              <h3>Hikvision Dome Series</h3>
+              <p>Compact wired dome camera option for shops, offices, ceilings, reception areas, and indoor entrances.</p>
+              <ul class="spec-list" aria-label="Hikvision Dome Series highlights">
+                <li><i data-lucide="check-circle-2"></i><span>Clean ceiling-mounted camera style</span></li>
+                <li><i data-lucide="check-circle-2"></i><span>Suitable for indoor and semi-outdoor areas</span></li>
+                <li><i data-lucide="check-circle-2"></i><span>Stable recording through wired connection</span></li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-image">
+              <img src="https://assets.hikvision.com/prd/public/all/image/m000000179/23X5G1-Turret.png" alt="Hikvision wired turret camera" loading="lazy">
+            </div>
+            <div class="product-body">
+              <span class="product-meta"><i data-lucide="cable"></i>Hikvision turret</span>
+              <h3>Hikvision Turret Series</h3>
+              <p>Flexible wired turret camera option for homes and businesses that need practical angle adjustment and clear video.</p>
+              <ul class="spec-list" aria-label="Hikvision Turret Series highlights">
+                <li><i data-lucide="check-circle-2"></i><span>Flexible viewing angle after installation</span></li>
+                <li><i data-lucide="check-circle-2"></i><span>Popular for home and business CCTV setups</span></li>
+                <li><i data-lucide="check-circle-2"></i><span>Can be planned with DVR/NVR storage</span></li>
+              </ul>
+            </div>
+          </article>
+        </div>
+
+        <h3 class="series-title"><i data-lucide="shield-check"></i>Uniarch Series</h3>
         <div class="product-grid">
           <article class="product-card">
             <div class="product-image">
@@ -1041,8 +1110,8 @@
     <div class="container footer-row">
       <p>&copy; 2026 WebX Tech Solutions. All rights reserved.</p>
       <div class="footer-links">
-        <a href="index.html#services">Services</a>
-        <a href="cctv-solutions-sri-lanka.html">CCTV</a>
+        <a href="index.html">Web Development</a>
+        <a href="cctv-solutions-sri-lanka.html">CCTV Solutions</a>
         <a href="index.html#portfolio">Portfolio</a>
         <a href="#contact">Contact</a>
       </div>
