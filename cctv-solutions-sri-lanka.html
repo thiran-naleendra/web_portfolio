@@ -1,0 +1,1073 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="WebX Tech Solutions provides CCTV camera installation, security camera systems, remote monitoring, and maintenance support for homes and businesses in Sri Lanka." />
+  <title>CCTV Solutions in Sri Lanka | WebX Tech Solutions</title>
+  <link rel="icon" type="image/png" href="images/logo.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    :root {
+      color-scheme: dark;
+      --ink: #f8fafc;
+      --muted: #a9b4c5;
+      --line: rgba(148, 163, 184, 0.22);
+      --paper: #101b2d;
+      --soft: #07111f;
+      --section-alt: #0b182b;
+      --panel: rgba(16, 27, 45, 0.94);
+      --tag-bg: rgba(148, 163, 184, 0.12);
+      --tag-border: rgba(148, 163, 184, 0.2);
+      --tag-ink: #dbeafe;
+      --navy: #0b182b;
+      --blue: #0b63ce;
+      --teal: #009b8f;
+      --amber: #f2a900;
+      --green: #18a058;
+      --shadow: 0 20px 45px rgba(0, 0, 0, 0.28);
+    }
+
+    [data-theme="light"] {
+      color-scheme: light;
+      --ink: #101828;
+      --muted: #667085;
+      --line: #d9e2ec;
+      --paper: #ffffff;
+      --soft: #f6f8fb;
+      --section-alt: #ffffff;
+      --panel: rgba(255, 255, 255, 0.94);
+      --tag-bg: #f0f4f8;
+      --tag-border: #dce6f0;
+      --tag-ink: #334155;
+      --shadow: 0 20px 45px rgba(16, 24, 40, 0.1);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--soft);
+      color: var(--ink);
+      font-family: "Inter", Arial, sans-serif;
+      line-height: 1.6;
+      transition: background 0.2s ease, color 0.2s ease;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    .container {
+      width: min(1160px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    .topbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 50;
+      width: 100%;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+      background: rgba(11, 24, 43, 0.88);
+      backdrop-filter: blur(18px);
+      color: #ffffff;
+    }
+
+    .nav {
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+      min-height: 74px;
+    }
+
+    .brand {
+      align-items: center;
+      display: flex;
+      gap: 12px;
+      font-size: 17px;
+      font-weight: 800;
+    }
+
+    .brand-mark {
+      align-items: center;
+      background: #020617;
+      border-radius: 8px;
+      display: grid;
+      height: 38px;
+      overflow: hidden;
+      padding: 6px;
+      place-items: center;
+      position: relative;
+      width: 38px;
+    }
+
+    .brand-mark img {
+      height: 170px;
+      left: -16px;
+      max-width: none;
+      position: absolute;
+      top: -54px;
+      width: 170px;
+    }
+
+    .nav-links {
+      align-items: center;
+      display: flex;
+      gap: 26px;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .nav-links a {
+      color: rgba(255, 255, 255, 0.78);
+    }
+
+    .nav-links a:hover {
+      color: #ffffff;
+    }
+
+    .theme-toggle {
+      align-items: center;
+      background: rgba(255, 255, 255, 0.09);
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      border-radius: 8px;
+      color: #ffffff;
+      cursor: pointer;
+      display: inline-flex;
+      height: 44px;
+      justify-content: center;
+      width: 44px;
+    }
+
+    .nav-cta {
+      align-items: center;
+      background: var(--amber);
+      border-radius: 8px;
+      color: #1d1600;
+      display: inline-flex;
+      gap: 8px;
+      min-height: 44px;
+      padding: 11px 16px;
+      white-space: nowrap;
+    }
+
+    .hero {
+      background:
+        linear-gradient(120deg, rgba(7, 17, 31, 0.98), rgba(11, 24, 43, 0.92) 52%, rgba(0, 155, 143, 0.2)),
+        url("images/cctv-uniarch-installation.jpg") right center / cover no-repeat;
+      color: #ffffff;
+      min-height: 92vh;
+      padding: 132px 0 54px;
+    }
+
+    .hero-grid {
+      align-items: center;
+      display: grid;
+      gap: 42px;
+      grid-template-columns: minmax(0, 1fr) minmax(330px, 390px);
+    }
+
+    .eyebrow {
+      align-items: center;
+      color: #a7f3d0;
+      display: inline-flex;
+      font-size: 13px;
+      font-weight: 800;
+      gap: 9px;
+      letter-spacing: 0;
+      margin-bottom: 18px;
+      text-transform: uppercase;
+    }
+
+    .hero h1 {
+      font-size: clamp(40px, 5.2vw, 68px);
+      letter-spacing: 0;
+      line-height: 1.02;
+      max-width: 800px;
+    }
+
+    .hero-copy {
+      color: rgba(255, 255, 255, 0.82);
+      font-size: clamp(16px, 1.6vw, 20px);
+      margin-top: 20px;
+      max-width: 710px;
+    }
+
+    .hero-proof {
+      color: rgba(255, 255, 255, 0.72);
+      display: flex;
+      flex-wrap: wrap;
+      font-size: 14px;
+      font-weight: 700;
+      gap: 10px;
+      list-style: none;
+      margin-top: 22px;
+      max-width: 760px;
+    }
+
+    .hero-proof li {
+      align-items: center;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.13);
+      border-radius: 999px;
+      display: inline-flex;
+      gap: 8px;
+      min-height: 36px;
+      padding: 7px 12px;
+    }
+
+    .hero-proof i {
+      color: #a7f3d0;
+      flex: 0 0 auto;
+      height: 16px;
+      width: 16px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 30px;
+    }
+
+    .btn {
+      align-items: center;
+      border-radius: 8px;
+      display: inline-flex;
+      font-weight: 800;
+      gap: 10px;
+      justify-content: center;
+      min-height: 52px;
+      padding: 0 20px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-primary {
+      background: var(--amber);
+      box-shadow: 0 18px 35px rgba(242, 169, 0, 0.28);
+      color: #1d1600;
+    }
+
+    .btn-ghost {
+      border: 1px solid rgba(255, 255, 255, 0.34);
+      color: #ffffff;
+    }
+
+    .btn-whatsapp {
+      background: var(--green);
+      color: #ffffff;
+    }
+
+    .hero-panel,
+    .service-card,
+    .product-card,
+    .process-step,
+    .coverage-card,
+    .about-box {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      box-shadow: var(--shadow);
+    }
+
+    .hero-panel {
+      background: var(--panel);
+      color: var(--ink);
+      padding: 24px;
+    }
+
+    .hero-panel h2 {
+      font-size: 21px;
+      line-height: 1.3;
+      margin-bottom: 12px;
+    }
+
+    .hero-panel p,
+    .service-card p,
+    .product-card p,
+    .process-step p,
+    .coverage-card p,
+    .about-box p {
+      color: var(--muted);
+    }
+
+    .check-list {
+      display: grid;
+      gap: 13px;
+      list-style: none;
+      margin-top: 18px;
+    }
+
+    .check-list li {
+      align-items: flex-start;
+      color: var(--muted);
+      display: flex;
+      gap: 10px;
+      font-size: 14px;
+    }
+
+    .check-list i {
+      color: var(--teal);
+      flex: 0 0 auto;
+      height: 19px;
+      margin-top: 2px;
+      width: 19px;
+    }
+
+    .hero-installations {
+      display: grid;
+      gap: 10px;
+      grid-template-columns: repeat(2, 1fr);
+      margin-top: 18px;
+    }
+
+    .hero-installation {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .hero-installation img {
+      aspect-ratio: 4 / 5;
+      height: 100%;
+      object-fit: cover;
+      width: 100%;
+    }
+
+    .hero-installation span {
+      background: rgba(7, 17, 31, 0.78);
+      bottom: 8px;
+      color: #ffffff;
+      font-size: 12px;
+      font-weight: 800;
+      left: 8px;
+      line-height: 1;
+      padding: 7px 8px;
+      position: absolute;
+      right: 8px;
+    }
+
+    section {
+      padding: 88px 0;
+    }
+
+    .section-alt {
+      background: var(--section-alt);
+    }
+
+    .section-head {
+      align-items: end;
+      display: flex;
+      gap: 28px;
+      justify-content: space-between;
+      margin-bottom: 34px;
+    }
+
+    .section-head h2 {
+      font-size: clamp(31px, 4vw, 48px);
+      line-height: 1.08;
+      max-width: 700px;
+    }
+
+    .section-head p {
+      color: var(--muted);
+      max-width: 430px;
+    }
+
+    .services {
+      display: grid;
+      gap: 18px;
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .service-card,
+    .product-card,
+    .process-step,
+    .coverage-card,
+    .about-box {
+      padding: 26px;
+    }
+
+    .icon-box {
+      align-items: center;
+      background: rgba(0, 155, 143, 0.14);
+      border-radius: 8px;
+      color: var(--teal);
+      display: grid;
+      height: 46px;
+      margin-bottom: 22px;
+      place-items: center;
+      width: 46px;
+    }
+
+    .service-card:nth-child(2) .icon-box,
+    .coverage-card:nth-child(2) .icon-box {
+      background: rgba(11, 99, 206, 0.15);
+      color: var(--blue);
+    }
+
+    .service-card:nth-child(3) .icon-box,
+    .coverage-card:nth-child(3) .icon-box {
+      background: rgba(242, 169, 0, 0.16);
+      color: var(--amber);
+    }
+
+    .service-card h3,
+    .product-card h3,
+    .process-step h3,
+    .coverage-card h3 {
+      font-size: 21px;
+      line-height: 1.25;
+      margin-bottom: 11px;
+    }
+
+    .product-grid {
+      display: grid;
+      gap: 20px;
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .product-card {
+      overflow: hidden;
+      padding: 0;
+    }
+
+    .product-image {
+      align-items: center;
+      aspect-ratio: 16 / 10;
+      background: #ffffff;
+      display: flex;
+      justify-content: center;
+      overflow: hidden;
+      padding: 22px;
+    }
+
+    .product-image img {
+      height: 100%;
+      object-fit: contain;
+      width: 100%;
+    }
+
+    .product-body {
+      padding: 24px;
+    }
+
+    .product-meta {
+      align-items: center;
+      color: var(--teal);
+      display: inline-flex;
+      font-size: 13px;
+      font-weight: 900;
+      gap: 8px;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+    }
+
+    .spec-list {
+      display: grid;
+      gap: 8px;
+      list-style: none;
+      margin-top: 16px;
+    }
+
+    .spec-list li {
+      align-items: flex-start;
+      color: var(--muted);
+      display: flex;
+      font-size: 14px;
+      gap: 8px;
+    }
+
+    .spec-list i {
+      color: var(--teal);
+      flex: 0 0 auto;
+      height: 17px;
+      margin-top: 2px;
+      width: 17px;
+    }
+
+    .coverage-grid {
+      display: grid;
+      gap: 18px;
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .about-wrap {
+      align-items: stretch;
+      display: grid;
+      gap: 28px;
+      grid-template-columns: 0.95fr 1.05fr;
+    }
+
+    .about-media {
+      border-radius: 8px;
+      min-height: 430px;
+      overflow: hidden;
+    }
+
+    .about-media img {
+      height: 100%;
+      object-fit: cover;
+      width: 100%;
+    }
+
+    .about-box h2 {
+      font-size: clamp(30px, 3.8vw, 46px);
+      line-height: 1.1;
+    }
+
+    .about-box p {
+      font-size: 17px;
+      margin-top: 14px;
+    }
+
+    .process {
+      display: grid;
+      gap: 18px;
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    .step-number {
+      color: var(--teal);
+      display: block;
+      font-size: 13px;
+      font-weight: 900;
+      margin-bottom: 16px;
+      text-transform: uppercase;
+    }
+
+    .cta {
+      background:
+        linear-gradient(90deg, rgba(11, 24, 43, 0.96), rgba(11, 24, 43, 0.82)),
+        url("https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?auto=format&fit=crop&w=1600&q=82") center / cover;
+      color: #ffffff;
+      padding: 76px 0;
+    }
+
+    .cta-box {
+      align-items: center;
+      display: flex;
+      gap: 28px;
+      justify-content: space-between;
+    }
+
+    .cta h2 {
+      font-size: clamp(32px, 5vw, 52px);
+      line-height: 1.08;
+      max-width: 720px;
+    }
+
+    .cta p {
+      color: rgba(255, 255, 255, 0.78);
+      margin-top: 16px;
+      max-width: 620px;
+    }
+
+    .cta-actions {
+      display: flex;
+      flex: 0 0 auto;
+      flex-direction: column;
+      gap: 12px;
+      min-width: 210px;
+    }
+
+    footer {
+      background: #07111f;
+      color: rgba(255, 255, 255, 0.64);
+      padding: 26px 0;
+    }
+
+    .footer-row {
+      align-items: center;
+      display: flex;
+      gap: 18px;
+      justify-content: space-between;
+      font-size: 14px;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 18px;
+    }
+
+    [data-lucide] {
+      height: 19px;
+      width: 19px;
+    }
+
+    @media (max-width: 980px) {
+      .hero-grid,
+      .about-wrap {
+        grid-template-columns: 1fr;
+      }
+
+      .services,
+      .product-grid,
+      .coverage-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .process {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .section-head,
+      .cta-box {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .cta-actions {
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .container {
+        width: min(100% - 28px, 1160px);
+      }
+
+      .topbar {
+        position: absolute;
+      }
+
+      .nav {
+        min-height: 66px;
+      }
+
+      .nav-links a:not(.nav-cta) {
+        display: none;
+      }
+
+      .theme-toggle {
+        height: 42px;
+        width: 42px;
+      }
+
+      .nav-cta {
+        min-height: 42px;
+        padding: 0 12px;
+      }
+
+      .hero {
+        min-height: auto;
+        padding: 96px 0 40px;
+      }
+
+      .hero h1 {
+        font-size: clamp(38px, 12vw, 48px);
+      }
+
+      .hero-proof li {
+        width: 100%;
+      }
+
+      .process {
+        grid-template-columns: 1fr;
+      }
+
+      section {
+        padding: 62px 0;
+      }
+
+      .about-media {
+        min-height: 300px;
+      }
+
+      .footer-row {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
+
+    @media (max-width: 440px) {
+      .brand span:last-child {
+        max-width: 120px;
+      }
+
+      .hero-actions,
+      .cta-actions {
+        width: 100%;
+      }
+
+      .btn {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body data-theme="dark">
+  <div class="topbar">
+    <div class="container nav">
+      <a href="index.html" class="brand" aria-label="WebX Tech Solutions home">
+        <span class="brand-mark"><img src="images/logo.png" alt="" aria-hidden="true"></span>
+        <span>WebX Tech Solutions</span>
+      </a>
+
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="index.html#services">Services</a>
+        <a href="cctv-solutions-sri-lanka.html">CCTV</a>
+        <a href="index.html#portfolio">Portfolio</a>
+        <a href="#process">Process</a>
+        <button class="theme-toggle" type="button" aria-label="Switch to light mode" aria-pressed="true">
+          <i data-lucide="sun"></i>
+        </button>
+        <a href="tel:0705651875" class="nav-cta"><i data-lucide="phone"></i><span>Call</span></a>
+      </nav>
+    </div>
+  </div>
+
+  <header class="hero">
+    <div class="container hero-grid">
+      <div>
+        <span class="eyebrow"><i data-lucide="shield-check"></i>CCTV solutions in Sri Lanka</span>
+        <h1>Security camera systems for homes, shops, offices, hotels, and warehouses.</h1>
+        <p class="hero-copy">
+          WebX Tech Solutions helps Sri Lankan customers choose, install, and maintain practical CCTV systems with clear video, remote viewing, and reliable recording.
+        </p>
+
+        <ul class="hero-proof" aria-label="CCTV service highlights">
+          <li><i data-lucide="camera"></i><span>HD, IP, and Wi-Fi camera options</span></li>
+          <li><i data-lucide="smartphone"></i><span>Mobile app viewing and alerts</span></li>
+          <li><i data-lucide="hard-drive"></i><span>DVR/NVR recording and backup guidance</span></li>
+        </ul>
+
+        <div class="hero-actions">
+          <a href="https://wa.me/94705651875?text=Hi%20WebX%20Tech%20Solutions%2C%20I%20need%20CCTV%20solutions%20in%20Sri%20Lanka." target="_blank" class="btn btn-primary" rel="noopener"><i data-lucide="message-circle"></i>Get CCTV Quote</a>
+          <a href="#wireless-cameras" class="btn btn-ghost"><i data-lucide="list-checks"></i>View Models</a>
+        </div>
+      </div>
+
+      <aside class="hero-panel" aria-label="CCTV installation highlights">
+        <h2>Planned around your location, budget, and security risk</h2>
+        <p>We help you place cameras where they actually protect entrances, counters, parking areas, storage rooms, and key business zones.</p>
+        <ul class="check-list">
+          <li><i data-lucide="check-circle-2"></i><span>Site visit or remote requirement discussion.</span></li>
+          <li><i data-lucide="check-circle-2"></i><span>Camera layout, storage capacity, and network planning.</span></li>
+          <li><i data-lucide="check-circle-2"></i><span>Installation, configuration, and mobile access setup.</span></li>
+          <li><i data-lucide="check-circle-2"></i><span>Maintenance support for clearer long-term operation.</span></li>
+        </ul>
+
+        <div class="hero-installations" aria-label="Installed CCTV camera examples">
+          <figure class="hero-installation">
+            <img src="images/cctv-uniarch-installation.jpg" alt="Uniarch outdoor CCTV camera installed on a Sri Lankan home wall" loading="lazy" onerror="this.closest('.hero-installation').hidden = true">
+            <span>Uniarch outdoor camera</span>
+          </figure>
+
+          <figure class="hero-installation">
+            <img src="images/cctv-ezviz-installation.jpg" alt="EZVIZ CCTV camera installed indoors on a Sri Lankan property wall" loading="lazy" onerror="this.closest('.hero-installation').hidden = true">
+            <span>EZVIZ indoor camera</span>
+          </figure>
+        </div>
+      </aside>
+    </div>
+  </header>
+
+  <main>
+    <section id="packages">
+      <div class="container">
+        <div class="section-head">
+          <h2>CCTV installation and security camera services.</h2>
+          <p>Choose a simple home setup or a wider business security system with recording, remote access, and expansion options.</p>
+        </div>
+
+        <div class="services">
+          <article class="service-card">
+            <span class="icon-box"><i data-lucide="home"></i></span>
+            <h3>Home CCTV Systems</h3>
+            <p>Camera setups for gates, entrances, gardens, garages, and indoor areas with mobile viewing for everyday peace of mind.</p>
+          </article>
+
+          <article class="service-card">
+            <span class="icon-box"><i data-lucide="building-2"></i></span>
+            <h3>Business Security</h3>
+            <p>CCTV systems for shops, offices, hotels, restaurants, warehouses, schools, and small factories across Sri Lanka.</p>
+          </article>
+
+          <article class="service-card">
+            <span class="icon-box"><i data-lucide="settings"></i></span>
+            <h3>Setup &amp; Maintenance</h3>
+            <p>DVR/NVR setup, network configuration, app access, password reset support, camera replacement, and system health checks.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-alt" id="wireless-cameras">
+      <div class="container">
+        <div class="section-head">
+          <h2>Wireless camera options from trusted brands.</h2>
+          <p>Good for homes, small shops, offices, and rental properties where fast setup, mobile viewing, and neat installation matter.</p>
+        </div>
+
+        <div class="product-grid">
+          <article class="product-card">
+            <div class="product-image">
+              <img src="https://s3.amazonaws.com/mfs.ezvizlife.com/dc14ac15c970017dfb11d0a9ee02e919.jpg" alt="EZVIZ C6N wireless pan and tilt camera" loading="lazy">
+            </div>
+            <div class="product-body">
+              <span class="product-meta"><i data-lucide="wifi"></i>Wireless indoor</span>
+              <h3>EZVIZ C6N</h3>
+              <p>Smart Wi-Fi pan and tilt camera for indoor monitoring, remote viewing, motion detection, and simple home or shop coverage.</p>
+              <ul class="spec-list" aria-label="EZVIZ C6N highlights">
+                <li><i data-lucide="check-circle-2"></i><span>1080p video with 2.4 GHz Wi-Fi</span></li>
+                <li><i data-lucide="check-circle-2"></i><span>Pan and tilt coverage for wider rooms</span></li>
+                <li><i data-lucide="check-circle-2"></i><span>MicroSD storage support up to 256 GB</span></li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-image">
+              <img src="https://static-website.imou.com/5ea45542-a2fa-4c66-afdb-7cba6126041f.png" alt="Imou Ranger 2 wireless indoor camera" loading="lazy">
+            </div>
+            <div class="product-body">
+              <span class="product-meta"><i data-lucide="wifi"></i>Wireless indoor</span>
+              <h3>Imou Ranger 2</h3>
+              <p>Compact indoor camera option for family rooms, counters, offices, and reception areas with app viewing and flexible storage.</p>
+              <ul class="spec-list" aria-label="Imou Ranger 2 highlights">
+                <li><i data-lucide="check-circle-2"></i><span>Ranger 2 3MP, 4MP, and 5MP options</span></li>
+                <li><i data-lucide="check-circle-2"></i><span>Cloud, SD card, and NVR storage options</span></li>
+                <li><i data-lucide="check-circle-2"></i><span>Works with supported ONVIF NVR systems</span></li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-image">
+              <img src="https://www.uniarch.cn/res/202605/21/20260521_2234407_416acdf6-5c08-482b-8d88-58fafec3b4b1_1076872_575359_0.png" alt="Uniarch Uho-P1A wireless outdoor PT camera" loading="lazy">
+            </div>
+            <div class="product-body">
+              <span class="product-meta"><i data-lucide="wifi"></i>Wireless outdoor</span>
+              <h3>Uniarch Uho-P1A</h3>
+              <p>Outdoor Wi-Fi PT camera option for gates, parking areas, yards, and shop fronts where wider movement coverage is useful.</p>
+              <ul class="spec-list" aria-label="Uniarch Uho-P1A highlights">
+                <li><i data-lucide="check-circle-2"></i><span>3MP Wi-Fi dual-light outdoor PT camera</span></li>
+                <li><i data-lucide="check-circle-2"></i><span>Two-way audio with built-in mic and speaker</span></li>
+                <li><i data-lucide="check-circle-2"></i><span>IP66 weather protection</span></li>
+              </ul>
+            </div>
+          </article>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="wired-camera-models">
+      <div class="container">
+        <div class="section-head">
+          <h2>Wired camera models for stronger CCTV systems.</h2>
+          <p>Recommended for businesses, warehouses, hotels, and homes that need stable recording, PoE/NVR support, and cleaner long-term security management.</p>
+        </div>
+
+        <div class="product-grid">
+          <article class="product-card">
+            <div class="product-image">
+              <img src="https://www.uniarch.cn/res/202306/09/20230609_1882445_1_972421_575359_0.png" alt="Uniarch IPC-B122-APF28K wired bullet camera" loading="lazy">
+            </div>
+            <div class="product-body">
+              <span class="product-meta"><i data-lucide="cable"></i>Wired bullet</span>
+              <h3>Uniarch IPC-B122-APF28K</h3>
+              <p>Fixed IR bullet network camera for entrances, outdoor walls, corridors, and parking areas where a directional view is needed.</p>
+              <ul class="spec-list" aria-label="Uniarch IPC-B122-APF28K highlights">
+                <li><i data-lucide="check-circle-2"></i><span>2MP 1080p network camera</span></li>
+                <li><i data-lucide="check-circle-2"></i><span>Smart IR up to 30 m</span></li>
+                <li><i data-lucide="check-circle-2"></i><span>DC 12 V or PoE power support</span></li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-image">
+              <img src="https://www.uniarch.cn/res/202602/12/20260212_2197994_3b8f147e-3cfc-462b-b65f-05af218fedc4_1076896_575359_0.png" alt="Uniarch IPC-D122-PF28K wired dome camera" loading="lazy">
+            </div>
+            <div class="product-body">
+              <span class="product-meta"><i data-lucide="cable"></i>Wired dome</span>
+              <h3>Uniarch IPC-D122-PF28K</h3>
+              <p>Fixed IR dome network camera for ceilings, indoor entrances, offices, shops, and spaces where a compact vandal-resistant style fits better.</p>
+              <ul class="spec-list" aria-label="Uniarch IPC-D122-PF28K highlights">
+                <li><i data-lucide="check-circle-2"></i><span>2MP 1080p fixed dome camera</span></li>
+                <li><i data-lucide="check-circle-2"></i><span>IP67 and IK10 protection ratings</span></li>
+                <li><i data-lucide="check-circle-2"></i><span>PoE support for cleaner cable runs</span></li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-image">
+              <img src="https://www.uniarch.cn/res/202604/22/20260422_2217021_70c91f3b-7f6f-415d-9308-23f014d2fec2_1076900_575359_0.png" alt="Uniarch IPC-T122-APF28K wired turret camera" loading="lazy">
+            </div>
+            <div class="product-body">
+              <span class="product-meta"><i data-lucide="cable"></i>Wired turret</span>
+              <h3>Uniarch IPC-T122-APF28K</h3>
+              <p>Fixed IR turret network camera for homes and businesses that need a clean-looking wired camera with flexible angle adjustment.</p>
+              <ul class="spec-list" aria-label="Uniarch IPC-T122-APF28K highlights">
+                <li><i data-lucide="check-circle-2"></i><span>2MP 1080p fixed turret camera</span></li>
+                <li><i data-lucide="check-circle-2"></i><span>Built-in mic on supported model</span></li>
+                <li><i data-lucide="check-circle-2"></i><span>PoE and IP67 protection support</span></li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-alt">
+      <div class="container about-wrap">
+        <div class="about-media">
+          <img src="https://images.unsplash.com/photo-1605810230434-7631ac76ec81?auto=format&fit=crop&w=1200&q=82" alt="Security monitoring screens in a control room" loading="lazy">
+        </div>
+
+        <div class="about-box">
+          <span class="eyebrow" style="color: var(--teal);"><i data-lucide="scan-search"></i>Designed for real coverage</span>
+          <h2>Clear camera placement matters as much as the camera brand.</h2>
+          <p>
+            A good CCTV system should capture faces, entrances, transactions, vehicles, and activity in the areas that matter. We help plan the angles, cable routes, recorder storage, internet access, and mobile viewing setup before installation.
+          </p>
+          <p>
+            You can request a compact 2-camera or 4-camera home system, or a larger business setup with multiple cameras, NVR recording, and future expansion.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-head">
+          <h2>Suitable for many Sri Lankan locations.</h2>
+          <p>Security needs change by property type, so every setup is matched to the building, lighting, internet connection, and daily use.</p>
+        </div>
+
+        <div class="coverage-grid">
+          <article class="coverage-card">
+            <span class="icon-box"><i data-lucide="store"></i></span>
+            <h3>Shops &amp; Retail</h3>
+            <p>Monitor counters, shelves, entrances, cashier areas, and stock rooms with reliable playback when you need evidence.</p>
+          </article>
+
+          <article class="coverage-card">
+            <span class="icon-box"><i data-lucide="warehouse"></i></span>
+            <h3>Warehouses</h3>
+            <p>Cover loading bays, storage aisles, parking areas, and staff access points with cameras positioned for wider visibility.</p>
+          </article>
+
+          <article class="coverage-card">
+            <span class="icon-box"><i data-lucide="hotel"></i></span>
+            <h3>Hotels &amp; Villas</h3>
+            <p>Protect guest entrances, receptions, parking, corridors, and shared outdoor areas while keeping the setup professional.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-alt" id="process">
+      <div class="container">
+        <div class="section-head">
+          <h2>Simple process from inquiry to monitoring.</h2>
+          <p>We keep the CCTV project straightforward so you know what will be installed, where it will be installed, and how to use it.</p>
+        </div>
+
+        <div class="process">
+          <article class="process-step">
+            <span class="step-number">Step 01</span>
+            <h3>Discuss</h3>
+            <p>Share your location type, camera count, budget, and the areas you need to monitor.</p>
+          </article>
+
+          <article class="process-step">
+            <span class="step-number">Step 02</span>
+            <h3>Plan</h3>
+            <p>Choose camera positions, recorder type, storage capacity, wiring path, and remote access needs.</p>
+          </article>
+
+          <article class="process-step">
+            <span class="step-number">Step 03</span>
+            <h3>Install</h3>
+            <p>Mount cameras, configure DVR/NVR, connect the network, and test video quality.</p>
+          </article>
+
+          <article class="process-step">
+            <span class="step-number">Step 04</span>
+            <h3>Support</h3>
+            <p>Set up mobile viewing, explain playback, and provide maintenance help when needed.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta" id="contact">
+      <div class="container cta-box">
+        <div>
+          <h2>Need CCTV cameras installed in Sri Lanka?</h2>
+          <p>Send your location, property type, and the number of cameras you are considering. We will help you choose a practical system for your budget.</p>
+        </div>
+
+        <div class="cta-actions">
+          <a href="tel:0705651875" class="btn btn-primary"><i data-lucide="phone-call"></i>0705651875</a>
+          <a href="https://wa.me/94705651875?text=Hi%20WebX%20Tech%20Solutions%2C%20I%20need%20CCTV%20solutions%20in%20Sri%20Lanka." target="_blank" class="btn btn-whatsapp" rel="noopener"><i data-lucide="message-circle"></i>WhatsApp</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-row">
+      <p>&copy; 2026 WebX Tech Solutions. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="index.html#services">Services</a>
+        <a href="cctv-solutions-sri-lanka.html">CCTV</a>
+        <a href="index.html#portfolio">Portfolio</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const themeToggle = document.querySelector(".theme-toggle");
+    const savedTheme = localStorage.getItem("webx-theme") || "dark";
+
+    function setTheme(theme) {
+      const isDark = theme === "dark";
+      document.body.dataset.theme = theme;
+      localStorage.setItem("webx-theme", theme);
+      themeToggle.setAttribute("aria-pressed", String(isDark));
+      themeToggle.setAttribute("aria-label", isDark ? "Switch to light mode" : "Switch to dark mode");
+      themeToggle.innerHTML = `<i data-lucide="${isDark ? "sun" : "moon"}"></i>`;
+      lucide.createIcons();
+    }
+
+    themeToggle.addEventListener("click", () => {
+      setTheme(document.body.dataset.theme === "dark" ? "light" : "dark");
+    });
+
+    setTheme(savedTheme);
+  </script>
+</body>
+</html>
